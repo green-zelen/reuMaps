@@ -9,11 +9,27 @@
 	
 	<!-- Le styles -->
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<style>
+		h1 {
+			margin-top: 15%;
+			padding: 3%;
+			}
+	</style>
 	
 	</head>
 	<body>
 	
 	<!-- Place for your code, oy e -->
+	
+	<center><h1>Авторизация</h1>
+	<!-- Создаем Фому авторизации-->
+	<form method="POST" action="auth.php" class="form-inline">
+		<input type="text" name="email" placeholder="e-mail" > <br>
+		<input type="text" name="pass" placeholder="password"> <br>
+		<br>
+		<input type="checkbox"> <label class="checkbox" for="checkbox">Запомнить</label>
+
+		<input type="submit" value="Войти"  class="btn btn-success">
 
 	<!-- Le javascript
     ================================================== -->
