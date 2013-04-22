@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Апр 22 2013 г., 01:37
+-- Время создания: Апр 22 2013 г., 06:06
 -- Версия сервера: 5.1.44
 -- Версия PHP: 5.3.1
 
@@ -32,9 +32,11 @@ CREATE TABLE IF NOT EXISTS `user` (
   `full_name` varchar(60) DEFAULT NULL,
   `level` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `user`
 --
 
+INSERT INTO `user` (`user_id`, `login`, `password`, `full_name`, `level`) VALUES
+(1, 'admin', '1234', 'Cool Admin', 1);
