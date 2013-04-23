@@ -14,41 +14,22 @@
 		
 		<!-- Оформляем некоторые поправки дизайна вручную -->
 		<style type="text/css">
-	    body {
+		
+		body {
         padding-bottom: 40px;
         background-color: #f5f5f5;
         }
-
-        .form-signin {
-        max-width: 300px; 
-        padding: 19px 29px 29px;
-        margin: 8% auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-        }
-        
-        .form-signin .form-signin-heading,
-        .form-signin .checkbox {
-         margin-bottom: 10px;
-        }
-        
-        .form-signin input[type="text"],
-        .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-        }
+		
+		.nav-list {
+			max-width: 300px;
+			margin: 3% 0 0 3%;
+			background-color: #fff;
+		}
+		
 	    </style>
 	    
 	    <!-- Responsive-версия Bootstrap для компактных устройств -->
-	    <link src="css/bootstrap-responsive.css" rel="stylesheet">
+	    <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
 	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
@@ -58,22 +39,50 @@
 	</head>
 	
 	<body>
-
 	<!--Создадим навинационное меню-->
 	<div class="navbar  navbar-inverse">
 		<div class="navbar-inner">
-			<a class="brand" href="#">REU Maps</a> 
+			<a class="brand" href="#">ReuMaps</a> 
 	   </div>
 	</div>
 	<!-- /navbar -->
 
+	<div id="navigation-menu">
+	<ul class="nav nav-list">
+		<li class="nav-header">Фильтры</li>
+		<li class="active dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" onclick="clickMenu()">Осталось топлива   <b class="caret"></b></a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li>
+					<div>
+						<nobr><a> менее чем на </a><a id="amount">0</a><a> суток</a>
+						</nobr>
+					</div>
+				</li>
+				<li><input type="range" min="0" max="90" value="0" onchange="document.getElementById('amount').innerHTML=this.value;" /><li>
+				<li><input id="hidden" type="hidden"/></li>
+			</ul>
+		</li>
+		<li><a href="#">Чекпоинты с видами топлива</a></li>
+		<li><a href="#">РТ/Районы</a></li>
+		<li><a href="#">Типы объектов</a></li>
+		<hr>
+		<li class="nav-header">Дополнительно</li>
+		<li><a href="#">Сбросить все/ Предыдущее состояние</a></li>
 
+	</ul>
+	</div>
+	<!-- /navigation-menu -->
+	
+	<div class="container">
+	<!-- /conteiner -->
+	
 	<!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script>$('.dropdown-toggle').clickMenu()</script>
+    
     </body>
 </html>
