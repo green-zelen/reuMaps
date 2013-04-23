@@ -48,7 +48,7 @@
 		}
 		.span12 {
 			background-color: #ffffff;
-			max-width: 1200px;
+			max-width: 1100px;
 			max-height: 1000px;
 			margin: 1% 2% 0 -5%;
 		}
@@ -105,103 +105,108 @@
 	   </div>
 	</div>
 	<!-- /navbar -->
-
-	<div id="navigation-menu" class="span3">
-	<ul class="nav nav-list">
-		<li class="nav-header">Фильтры</li>
-		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Осталось топлива   <b class="caret"></b></a>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li>
-					<div id="inside-dropdown">
-						<nobr><a>менее чем на </a><a id="amount">0</a><a> суток</a>
-						</nobr>
-					</div>
-				</li>
-				<li><input type="range" min="0" max="90" value="0" onchange="document.getElementById('amount').innerHTML=this.value;" /><li>
-				<li><input id="hidden" type="hidden"/></li>
-			</ul>
-		</li>
-		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Виды топлива   <b class="caret"></b></a>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><input type="checkbox" class="checkbox-elements"/>Уголь</li>
-				<li><input type="checkbox"/>Что-то еще<li>
-			</ul>
-		</li>
-		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Типы объектов     <b class="caret"></b></a>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<li><input type="checkbox"/>Котельные</li>
-				<li><input type="checkbox"/>Поставщики<li>
-			</ul>
-		</li>
-		<li><a href="#">РТ/Районы</a></li>
-		<hr>
-		<li class="nav-header">Дополнительно</li>
-		<li><button class="btn btn-primary" type="submit">Сбросить</button></li>
-
-	</ul>
-	</div>
-	<!-- /navigation-menu -->
 	
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span3">
+				<div id="navigation-menu">
+					<ul class="nav nav-list">
+						<li class="nav-header">Фильтры</li>
+						<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Осталось топлива   <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li>
+									<div id="inside-dropdown">
+										<nobr><a>менее чем на </a><a id="amount">0</a><a> суток</a>
+										</nobr>
+									</div>
+								</li>
+								<li><input type="range" min="0" max="90" value="0" onchange="document.getElementById('amount').innerHTML=this.value;" /><li>
+								<li><input id="hidden" type="hidden"/></li>
+							</ul>
+						</li>
+						<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Виды топлива   <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><input type="checkbox" class="checkbox-elements"/>Уголь</li>
+								<li><input type="checkbox"/>Что-то еще<li>
+							</ul>
+						</li>
+						<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Типы объектов     <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><input type="checkbox"/>Котельные</li>
+								<li><input type="checkbox"/>Поставщики<li>
+							</ul>
+						</li>
+						<li><a href="#">РТ/Районы</a></li>
+						<hr>
+						<li class="nav-header">Дополнительно</li>
+						<li><button class="btn btn-primary" type="submit">Сбросить</button></li>
 
+					</ul>
+				</div>
+				<!-- /navigation-menu -->
+	
+				<br>
+				<div id="navigation-menu">
+					<ul class="nav nav-list">
+						<li class="nav-header">Легенда</li>
+						<br>
+						<br>		
+					</ul>
+				</div>
+				<!-- /navigation-menu -->
+			</div>
+			<!-- /span3 -->
 
-
-	<!--Блок с картой-->
-	<div class="container pull-right span12" id="map"> Карта
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+			<div class="container pull-right span12" id="map"> Карта
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+	
 	
 	</div>
 	<!-- /conteiner -->
 	
+</div>
+</div>
+<!-- /container-fluid -->
+	
 		
-	<div id="navigation-menu" class="span3">
-	<ul class="nav nav-list">
-		<li class="nav-header">Легенда</li>
-		<br>
-		<br>		
-	</ul>
-	</div>
-	<!-- /navigation-menu -->
+	
 
 	
 	<!-- Le javascript
