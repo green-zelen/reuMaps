@@ -6,7 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
-	
+		<!-- API Yandex Maps -->
+		<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.clusters&lang=ru-RU" type="text/javascript"></script>
+		<script src="http://yandex.st/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+
 		 
 		<!-- Le styles -->
 		<!-- Используем набор инструментов Bootstrap -->
@@ -22,7 +25,7 @@
 		
 		.nav-list {
 			max-width: 300px;
-			margin: 3% 0 0 3%;
+			margin: 0 0 0 5%;
 			background-color: #fff;
 		}
 		.navigation-menu {
@@ -38,6 +41,18 @@
 		.checkbox-elements {
 			margin: 5%;
 		}
+		
+		
+		.span3 {
+			margin: 1%;
+		}
+		.span12 {
+			background-color: #ffffff;
+			max-width: 1200px;
+			max-height: 1000px;
+			margin: 1% 2% 0 -5%;
+		}
+		
 	    </style>
 	    
 	    <!-- Responsive-версия Bootstrap для компактных устройств -->
@@ -45,8 +60,29 @@
 
 	    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
-		    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		    <![endif]-->
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Карта -->
+		<script type="text/javascript">
+		var reuMap; 
+		// Дождёмся загрузки API и готовности DOM.
+		ymaps.ready(init); 
+		
+		function init () {
+	    // Создание экземпляра карты и его привязка к контейнеру с
+	    // заданным id ("map").
+	    reuMap = new ymaps.Map('map', {
+		        // При инициализации карты обязательно нужно указать
+		        // её центр и коэффициент масштабирования.
+		        center:[17.53, 136.8], // Уссурийск
+		        zoom:3
+	        });
+	    }
+		</script>
+		<!-- /Карта -->
+
+		
 
 	</head>
 	
@@ -54,12 +90,23 @@
 	<!--Создадим навинационное меню-->	
 	<div class="navbar  navbar-inverse">
 		<div class="navbar-inner">
-			<a class="brand" href="#">ReuMaps</a> 
+			<a class="brand" href="#">ReuMaps</a>
+			<ul class="nav">
+				<li class="active">
+					<a href="#">Карта 1</a></li>
+				<li><a href="#">Навигация</a></li>
+			</ul>	
+			<ul class="nav pull-right">
+				<li class="active">
+					<a href="#">Label</a></li>
+					<li class="divider-vertical"></li>
+				<li><a href="#"><button class="btn" type="submit"> Выход</button></a></li>
+			</ul>			 
 	   </div>
 	</div>
 	<!-- /navbar -->
 
-	<div id="navigation-menu">
+	<div id="navigation-menu" class="span3">
 	<ul class="nav nav-list">
 		<li class="nav-header">Фильтры</li>
 		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Осталось топлива   <b class="caret"></b></a>
@@ -96,17 +143,65 @@
 	<!-- /navigation-menu -->
 	
 
+
+
+	<!--Блок с картой-->
+	<div class="container pull-right span12" id="map"> Карта
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	
-	<div id="navigation-menu">
+	</div>
+	<!-- /conteiner -->
+	
+		
+	<div id="navigation-menu" class="span3">
 	<ul class="nav nav-list">
 		<li class="nav-header">Легенда</li>
 		<br>
 		<br>		
 	</ul>
 	</div>
-
-	<div class="container">
-	<!-- /conteiner -->
+	<!-- /navigation-menu -->
 
 	
 	<!-- Le javascript
