@@ -25,7 +25,19 @@
 			margin: 3% 0 0 3%;
 			background-color: #fff;
 		}
+		.navigation-menu {
+			max-width: 300px;
+			margin: 3% 0 0 3%;
+			background-color: #fff;
+		}
 		
+		li {
+			padding: 2%;
+		}
+		
+		.checkbox-elements {
+			margin: 5%;
+		}
 	    </style>
 	    
 	    <!-- Responsive-версия Bootstrap для компактных устройств -->
@@ -39,7 +51,7 @@
 	</head>
 	
 	<body>
-	<!--Создадим навинационное меню-->
+	<!--Создадим навинационное меню-->	
 	<div class="navbar  navbar-inverse">
 		<div class="navbar-inner">
 			<a class="brand" href="#">ReuMaps</a> 
@@ -50,11 +62,11 @@
 	<div id="navigation-menu">
 	<ul class="nav nav-list">
 		<li class="nav-header">Фильтры</li>
-		<li class="active dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" onclick="clickMenu()">Осталось топлива   <b class="caret"></b></a>
+		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Осталось топлива   <b class="caret"></b></a>
 			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<li>
-					<div>
-						<nobr><a> менее чем на </a><a id="amount">0</a><a> суток</a>
+					<div id="inside-dropdown">
+						<nobr><a>менее чем на </a><a id="amount">0</a><a> суток</a>
 						</nobr>
 					</div>
 				</li>
@@ -62,19 +74,40 @@
 				<li><input id="hidden" type="hidden"/></li>
 			</ul>
 		</li>
-		<li><a href="#">Чекпоинты с видами топлива</a></li>
+		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Виды топлива   <b class="caret"></b></a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><input type="checkbox" class="checkbox-elements"/>Уголь</li>
+				<li><input type="checkbox"/>Что-то еще<li>
+			</ul>
+		</li>
+		<li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Типы объектов     <b class="caret"></b></a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li><input type="checkbox"/>Котельные</li>
+				<li><input type="checkbox"/>Поставщики<li>
+			</ul>
+		</li>
 		<li><a href="#">РТ/Районы</a></li>
-		<li><a href="#">Типы объектов</a></li>
 		<hr>
 		<li class="nav-header">Дополнительно</li>
-		<li><a href="#">Сбросить все/ Предыдущее состояние</a></li>
+		<li><button class="btn btn-primary" type="submit">Сбросить</button></li>
 
 	</ul>
 	</div>
 	<!-- /navigation-menu -->
 	
+
+	
+	<div id="navigation-menu">
+	<ul class="nav nav-list">
+		<li class="nav-header">Легенда</li>
+		<br>
+		<br>		
+	</ul>
+	</div>
+
 	<div class="container">
 	<!-- /conteiner -->
+
 	
 	<!-- Le javascript
     ================================================== -->
@@ -82,7 +115,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>$('.dropdown-toggle').clickMenu()</script>
+    <script>$('.dropdown-toggle').dropdown()</script>
     
     </body>
 </html>
